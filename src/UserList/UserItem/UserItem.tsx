@@ -11,9 +11,7 @@ const UserItem =({item}:UserItemProps)=>{
                 <Text style={userItemStyle.userName}>{`${item?.first_name} ${item?.last_name}`}</Text>
                 <Text style={userItemStyle.emailORAddress}>{item?.email}</Text>
                 <Text style={userItemStyle.address}>{item?.address}</Text>
-
             </View>
-
         </View>
     )
 
