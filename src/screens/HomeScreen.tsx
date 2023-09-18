@@ -1,15 +1,11 @@
-import { StackNavigationProp } from "@react-navigation/stack";
+import { StackNavigationProp, StackScreenProps } from "@react-navigation/stack";
 import { Button, Text, View } from "react-native";
-import { PersonProp, RootStackParamList } from "../../App";
+import { RootStackParamList } from "../navigation/RootStackNavigator";
 
 type RouteProps = StackNavigationProp<RootStackParamList, 'Home', 'MyStack'>;
 // type prosType = NativeStackScreenProps<stackScreens,'Home'>
-const HomeScreen=({navigation}:any)=> {
+const HomeScreen=({navigation,route,}:StackScreenProps<RootStackParamList>)=> {
 
-  const person:PersonProp = {
-    itemId: 86,
-    otherParam: 'anything you want here',
-  }
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Home Screen</Text>
@@ -18,7 +14,9 @@ const HomeScreen=({navigation}:any)=> {
           onPress={() => {
             //  navigation.navigate('Detail')
             /* 1. Navigate to the Detail route with params */
-            navigation.navigate('Detail',person );
+            navigation.navigate('Detail',{
+              id:24
+            });
           }}
         />
       </View>
