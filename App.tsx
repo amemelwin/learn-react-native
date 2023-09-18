@@ -1,11 +1,14 @@
-import UserList from './src/UserList/UserList';
-import { store } from './src/store';
 import { Provider } from 'react-redux';
+import DetailScreen from './src/screens/DetailScreen';
+import HomeScreen from './src/screens/HomeScreen';
+import { store } from './src/store';
 
 const App=()=> {
   return (
     <Provider store={store}>
-       <UserList/>  
+       {/* <UserList/>   */}
+       <HomeScreen/>
+       <DetailScreen/>
     </Provider>
   )
   //  <UserList/>  
