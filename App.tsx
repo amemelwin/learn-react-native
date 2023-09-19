@@ -1,15 +1,16 @@
 import * as React from 'react';
 import RootStackNavigator from './src/navigation/RootStackNavigator';
-export type ScreenProps = {
+export type GlobalProps= {
   name: string;
+  age: number;
 }
 const App=()=> {
-  const name = "Amie";
-  const screenProp : ScreenProps = {
-    name
+  const name = "Arrkar";
+  const globalProps : GlobalProps = {
+    name,age:300
   }
   return (
-    <RootStackNavigator screenProp={screenProp}/>   
+    <RootStackNavigator globalProps={globalProps}/>   
   )
 };
 export default App;
